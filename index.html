@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Conservation Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpeg');
+            background-repeat: repeat;
+            background-size: cover;
+            color: black;
+        }
+
+        header {
+            background-color: burlywood;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        #heading {
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: darkgreen;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form label,
+        form input,
+        form textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        form textarea {
+            height: 150px;
+        }
+
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .gallery-container img {
+            max-width: 100%;
+            height: 500px; /* Set the desired height for the images */
+            object-fit: cover; /* This ensures the image covers the container */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+}
+
+        .gallery-image {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        .gallery-image.active {
+            display: block;
+        }
+
+        .gallery-navigation {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .gallery-navigation button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 5px;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        /* Additional styles for FAQs section */
+        #faqs {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #faqs h2 {
+            text-align: center;
+            color: darkgreen;
+            margin-bottom: 20px;
+        }
+
+        #faqs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #faqs li {
+            margin-bottom: 10px;
+        }
+
+        #faqs li strong {
+            color: darkgreen;
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        #faqs li p {
+            font-size: 16px;
+        }
+
+        #faqs li img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 5px;
+        }
+        input[type="text"],
+      input[type="email"],
+      input[type="number"] {
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 50%;
+        border-radius: 5px;
+        border: none;
+      }
+      
+      button[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      .footer {
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+        .gmail,
+      .mobile,
+      .owner {
+        flex: 1;
+        margin-right: 20px;
+      }
+      
+      .gmail h3,
+      .mobile h3,
+      .owner h3 {
+        margin-bottom: 10px;
+      }
+      
+      .gmail ul,
+      .mobile ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .gmail li,
+      .mobile li {
+        margin-bottom: 10px;
+      }
+      
+    
+      
+      
+      .box {
+        width: 1200px;
+        height: 600px;
+        background-image: url('soil3.jpg');
+        background-size: cover;
+        
+        background-repeat: no-repeat;
+        padding-top: 0%;
+        margin-right: 0%;
+        padding-right: 20px;
+      } 
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="heading">SOIL CONSERVATION</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#erosion">Soil Erosion</a></li>
+                <li><a href="#methods">Methods</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to the Soil Conservation Website, where our mission is to safeguard and nurture our invaluable soil resources. Our team of dedicated experts is committed to promoting sustainable practices that not only preserve but enhance the vitality of our soil.</p>
+        <div id="image-container">
+            <img id="adnan" src="image1.jpg" alt="Slideshow Image">
+        </div>
+    
+
+    <section id="erosion">
+        <h2>Soil Erosion</h2>
+        <p>Soil erosion is a natural process, but it can be accelerated by human activities such as improper land use, deforestation, and poor agricultural practices. It leads to the loss of topsoil, which is vital for plant growth.
+            oil erosion is the process by which soil is gradually worn away and transported from one location to another by natural forces such as water, wind, ice, or gravity. It is a natural geological process, but it can be greatly accelerated by human activities like agriculture, construction, deforestation, and improper land management.
+
+There are several types of soil erosion:
+
+Water Erosion: This is the most common type of erosion and occurs when rainfall or irrigation causes the soil to be detached, transported, and deposited elsewhere. There are three main types of water erosion:
+
+Sheet Erosion: Thin layers of soil are removed uniformly across a large area.
+Rill Erosion: Water creates small, shallow channels (rills) in the soil.
+Gully Erosion: Rills become deeper and wider, forming larger channels known as gullies.
+Wind Erosion: Wind can blow away loose, dry soil particles, especially in arid or semi-arid regions. This can lead to the formation of sand dunes in deserts.
+
+Ice Erosion (Glacial Erosion): Glaciers can scrape and erode the underlying rock and soil as they move.
+
+Gravity Erosion (Mass Movement): This occurs when gravity causes soil to move downhill, often in the form of landslides, slumps, or rockfalls.
+
+The impacts of soil erosion can be significant and wide-ranging:
+
+Loss of Fertility: Eroded soil often contains nutrients necessary for plant growth. When this soil is carried away, it can lead to decreased fertility in the affected area.
+
+Water Pollution: Sediments eroded from the land can be carried into rivers, lakes, and streams, leading to water pollution.
+
+Habitat Destruction: Erosion can disrupt or destroy natural habitats for plants and animals, leading to biodiversity loss.
+
+Reduced Agricultural Productivity: Erosion can harm agricultural lands by removing topsoil, which is the most fertile layer.
+
+Infrastructure Damage: Gully erosion and landslides can pose a threat to roads, buildings, and other infrastructure.
+
+Siltation: Eroded sediments can fill up reservoirs, reducing their capacity and potentially causing problems for downstream water users.
+        </p>
+        <img src="image1170x530cropped.jpg" alt="Soil Erosion Example">
+    </section>
+
+</section>
+
+    <section id="methods">
+        <h2>Conservation Methods</h2>
+        <p>There are various methods for soil conservation that can be employed to prevent erosion, improve soil health, and promote sustainable agriculture. Some of the key methods include:</p>
+        <ul>
+            <li>Contour Plowing</li>
+            <li>Terracing</li>
+            <li>Cover Cropping</li>
+            <li>Windbreaks</li>
+            <li>Composting</li>
+            <li>Rotational Grazing</li>
+            <img id="conservation" style="height: 465px;" src="d5750f0b61da391b08fbaa13de6cb441.jpg" alt="Terracing">
+        </ul>
+    </section>
+    <section id="gallery">
+        <h2>Image Gallery</h2>
+        <div class="gallery-container">
+            <img class="gallery-image active" src="gallery1.jpg" alt="Gallery Image 1">
+            <img class="gallery-image" src="gallery2.jpeg" alt="Gallery Image 2">
+            <img class="gallery-image" src="gallery3.jpg" alt="Gallery Image 3">
+            <img class="gallery-image" src="gallery4.jpg" alt="Gallery Image 4">
+            <img class="gallery-image" src="gallery5.jpg" alt="Gallery Image 5">
+            <img class="gallery-image" src="gallery6.jpg" alt="Gallery Image 6">
+            <img class="gallery-image" src="gallery7.jpg" alt="Gallery Image 7">
+
+        </div>
+        <div class="gallery-navigation">
+            <button onclick="prevSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
+        </div>
+    </section>
+
+    <section id="tips">
+        <h2>Tips for prevent Soil erosion</h2>
+        <p>Here are some practical tips to help you conserve soil on your property:</p>
+        <ul>
+            <li>Minimize tillage to reduce soil disturbance.</li>
+            <li>Plant cover crops during off-seasons to protect soil.</li>
+            <li>Implement proper irrigation techniques to avoid water runoff.</li>
+            <li>Mulch around plants to retain moisture and prevent erosion.</li>
+            <li>Regularly test soil and apply appropriate fertilizers.</li>
+            <img src="gardenmulch-pineneedles.webp" alt="Mulching">
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to get involved in our soil conservation efforts, please don't hesitate to reach out to us. You can contact us via the form below or by using the provided email address and phone number.</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="40" required></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section id="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+            <li>
+                <strong>What is soil conservation?</strong>
+                <p>Soil conservation involves the implementation of strategies and techniques to protect and preserve soil from erosion, degradation, and other forms of damage.</p>
+            </li>
+            <li>
+                <strong>Why is soil conservation important?</strong>
+                <p>Soil is a vital resource for agriculture and the environment. Effective conservation ensures sustainable land use and helps maintain ecosystem health.</p>
+            </li>
+            <li>
+                <strong>What are some common soil conservation methods?</strong>
+                <p>Common methods include contour plowing, terracing, cover cropping, windbreaks, composting, and rotational grazing.</p>
+            </li>
+            <li>
+                <strong>How can I get involved in soil conservation efforts?</strong>
+                <p>You can get involved by participating in local conservation programs, adopting sustainable farming practices, and spreading awareness about soil conservation.</p>
+            </li>
+        </ul>
+        <br><br><br>
+    </section>
+    <div class="footer">
+        <div class="gmail">
+          <h3>Gmail</h3>
+          <ul>
+            <li>example1@gmail.com</li>
+            <li>example2@gmail.com</li>
+            <li>example3@gmail.com</li>
+          </ul>
+        </div>
+        <div class="mobile">
+          <h3>Mobile</h3>
+          <ul>
+            <li>+1 (123) 456-7890</li>
+            <li>+1 (123) 456-7891</li>
+            <li>+1 (123) 456-7892</li>
+          </ul>
+        </div>
+        <div class="owner">
+          <h3>Owner</h3>
+          <h4>Omais Hassan</h4>
+          <h4>Parvinder kaur</h4>
+          <h4>Yashwanth</h4>
+        </div>
+      </div>
+    
+    <footer>
+        <p>&copy;Soil Conservation & Erosion Prevention Website</p>
+    </footer>
+
+    <script>
+        let currentImageIndex = 0;
+        const images = [
+            "work2.jpg",
+            "work3.jpg",
+            "work4.jpg"
+            // Add more image URLs as needed
+        ];
+
+        function changeImage() {
+            const adnanImage = document.getElementById("adnan");
+            adnanImage.src = images[currentImageIndex];
+            currentImageIndex = (currentImageIndex + 1) % images.length; 
+            setTimeout(changeImage, 1500);
+        }
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.gallery-image');
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showSlide(currentImageIndex);
+        }
+
+        function prevSlide() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showSlide(currentImageIndex);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            changeImage();
+        });
+    </script>
+</body>
+
+</html>
